@@ -66,5 +66,11 @@ $endif$
 
 
 $body$
+
+$if(footer)$
+<footer>
+  $footer$
+</footer>
+$endif$
 </body>
 </html>
