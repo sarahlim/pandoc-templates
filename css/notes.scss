@@ -1,0 +1,204 @@
+/**
+ * Variables
+ */
+
+$font-stack: 'Euclid', 'PT Serif', 'Georgia', 'Times New Roman', serif;
+$monospace-stack: 'Consolas', Courier, Menlo, monospace;
+
+@mixin small-caps {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+}
+
+/**
+ * Base layout
+ */
+html {
+  font-family: $font-stack;
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6rem;
+  margin: 3rem;
+
+  @media (min-width: 800px) {
+    margin: 0 auto;
+    width: 60%;
+  }
+}
+
+/**
+ * Typography
+ */
+
+h2 {
+  margin-top: 3rem;
+}
+
+h3 {
+  margin-top: 2rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  code {
+    background-color: transparent;
+    font-size: 1em;
+  }
+}
+
+p,
+ul > li,
+ol > li {
+  line-height: 1.6;
+}
+
+a {
+  color: darken(#98c379, 25%);
+  text-decoration: none;
+
+  code {
+    background-color: transparent;
+  }
+}
+
+/**
+ * Lists
+ */
+
+
+/**
+ * Code
+ */
+
+code,
+pre,
+kbd {
+  font-family: $monospace-stack;
+  font-weight: 200;
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+
+code {
+  padding: 0.25rem;
+}
+
+code,
+pre {
+  background-color: lighten(#e4e4e4, 5%);
+}
+
+pre {
+  position: relative;
+  padding: 2rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  overflow-x: auto;
+
+  code {
+    padding: 0;  // Override standalone code padding
+  }
+
+  &.scheme::before {
+    content: 'rkt';
+    position: absolute;
+    font-size: 1rem;
+    right: 0;
+    top: 0;
+    color: darken(#e4e4e4, 25%);
+    background-color: #e4e4e4;
+    padding: 0.5rem 1rem;;
+  }
+}
+
+/**
+ * Blockquotes
+ */
+
+blockquote {
+  margin: 0 0 1rem;
+  padding: 0.1rem 2rem;
+  background-color: lighten(#e4e4e4, 5%);
+  border-left: 4px solid darken(#e4e4e4, 10%);
+  font-style: italic;
+  line-height: 1.6;
+
+  pre {
+    padding-top: 0;
+    padding-left: 2rem;
+  }
+
+  @media (min-width: 1100px) {
+    width: 80%;
+  }
+}
+
+/**
+ * Header & TOC
+ */
+
+header {
+  text-align: center;
+}
+
+#TOC {
+  ul > li {
+    margin: 0;
+  }
+
+  & > ul > li {
+    margin: 1rem 0;
+  }
+}
+
+/**
+ * Display elements
+ */
+
+hr {
+  width: 60%;
+  border-width: 0;
+  border-top: 1px solid #e4e4e4;
+  margin: 3rem auto;
+}
+
+/**
+ * Math
+ */
+
+br {
+  // HACK: Pandoc inserts <br> tags around math
+  display: none;
+}
+
+.math.inline,
+.math.display {
+  letter-spacing: 0.05em;
+}
+
+/**
+ * Tables
+ */
+
+table {
+  margin: 3rem auto;
+  min-width: 90%;
+  border-collapse: collapse;
+  border-bottom: 1px solid #000000;
+  table-layout: fixed;
+}
+
+th {
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  text-align: left;
+}
+
+td,
+th {
+  vertical-align: top;
+  padding: 1rem 0.5rem;
+}

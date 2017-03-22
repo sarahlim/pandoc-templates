@@ -36,12 +36,12 @@ $if(graphics)$
 $endif$
 
 $if(title)$
-\title{\bigskip \bigskip $title$$if(thanks)$\thanks{$thanks$} $endif$ }
-$endif$ 
+\title{\bigskip \bigskip $title$ $if(thanks)$\thanks{$thanks$} $endif$ }
+$endif$
 
-%\author{$for(author)$$author$$sep$\\$endfor$}
+{{!-- %\author{$for(author)$$author$$sep$\\$endfor$} --}}
 
-\author{$for(author)$\Large $author.name$\vspace{0.05in} \newline\normalsize\emph{$author.affiliation$} \newline\footnotesize \url{$author.email$}\vspace*{0.2in}\newline $sep$ \and $endfor$}
+{{!-- \author{$for(author)$\Large $author.name$\vspace{0.05in} \newline\normalsize\emph{$author.affiliation$} \newline\footnotesize \url{$author.email$}\vspace*{0.2in}\newline $sep$ \and $endfor$} --}}
 
 %\author{$for(author)$$author.name$ ($author.affiliation$)$sep$ \and $endfor$}
 
@@ -51,12 +51,12 @@ $for(header-includes)$
 $header-includes$
 $endfor$
 
-\begin{document}  
-\setkeys{Gin}{width=1\textwidth} 	
-%\setromanfont[Mapping=tex-text,Numbers=OldStyle]{Minion Pro} 
-%\setsansfont[Mapping=tex-text]{Minion Pro} 
+\begin{document}
+\setkeys{Gin}{width=1\textwidth}
+%\setromanfont[Mapping=tex-text,Numbers=OldStyle]{Minion Pro}
+%\setsansfont[Mapping=tex-text]{Minion Pro}
 %\setmonofont[Mapping=tex-text,Scale=0.8]{Pragmata}
-\chapterstyle{article-4} 
+\chapterstyle{article-4}
 \pagestyle{kjh}
 
 \published{$date$.}

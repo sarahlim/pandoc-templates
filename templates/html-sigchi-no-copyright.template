@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html$if(lang)$ lang="$lang$"$endif$>
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="pandoc">
+    $for(author-meta)$
+    <meta name="author" content="$author-meta$">
+    $endfor$
+    $if(date-meta)$
+    <meta name="dcterms.date" content="$date-meta$">
+    $endif$
+
+    <title>$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$</title>
+    <style type="text/css">code{white-space: pre;}</style>
+    <link rel="stylesheet" href="/Users/sarah/.pandoc/pandoc-templates/css/sigchi-tables.css">
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    $if(quotes)$
+    <style type="text/css">q { quotes: "“" "”" "‘" "’"; }</style>
+    $endif$
+
+    $if(highlighting-css)$
+    <style type="text/css">
+      $highlighting-css$
+    </style>
+    $endif$
+
+    $for(css)$
+    <link rel="stylesheet" href="$css$">
+    $endfor$
+
+    $if(math)$
+    $math$
+    $endif$
+
+    $for(header-includes)$
+    $header-includes$
+    $endfor$
+  </head>
+  <body>
+    $for(include-before)$
+    $include-before$
+    $endfor$
+    <header class="col-span">
+      <h1 class="title">
+      $if(title)$
+      $title$
+      $else$
+      SIGCHI Conference Proceedings Format
+      $endif$
+      </h1>
+      <div class="authors">
+        $for(author)$
+        <div class="author">
+          <div>$author.name$</div>
+          <div>$author.affiliation$</div>
+          $if(author.address)$
+          <div>$author.address$</div>
+          $endif$
+          <div>$author.email$</div>
+        </div>
+        $endfor$
+      </div>
+    </header>
+
+    <div class="abstract">
+      $if(abstract)$
+      <h1>Abstract</h1>
+      <p>$abstract$</p>
+      $endif$
+    </div>
+
+    $body$
+
+    $if(footer)$
+    <footer>
+      $footer$
+      This article is written for students in EECS 111 and 214 at Northwestern University. Please email slim at u dot northwestern dot edu with questions or corrections.
+    </footer>
+    $endif$
+
+  </body>
+  </html>

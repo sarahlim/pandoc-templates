@@ -5,6 +5,11 @@
 \usepackage{ifxetex,ifluatex}
 \usepackage{fixltx2e} % provides \textsubscript
 % use upquote if available, for straight quotes in verbatim environments
+
+% Additions
+\usepackage{forest-qtree}
+\usepackage{tikz}
+
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[utf8]{inputenc}

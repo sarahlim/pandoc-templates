@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html$if(lang)$ lang="$lang$"$endif$>
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="pandoc">
+    $for(author-meta)$
+    <meta name="author" content="$author-meta$">
+    $endfor$
+    $if(date-meta)$
+    <meta name="dcterms.date" content="$date-meta$">
+    $endif$
+
+    <title>$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$</title>
+    <style type="text/css">code{white-space: pre;}</style>
+    <link rel="stylesheet" href="../css/sigchi-ea.css">
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    $if(quotes)$
+    <style type="text/css">q { quotes: "“" "”" "‘" "’"; }</style>
+    $endif$
+
+    $if(highlighting-css)$
+    <style type="text/css">
+      $highlighting-css$
+    </style>
+    $endif$
+
+    $for(css)$
+    <link rel="stylesheet" href="$css$">
+    $endfor$
+
+    $if(math)$
+    $math$
+    $endif$
+
+    $for(header-includes)$
+    $header-includes$
+    $endfor$
+  </head>
+  <body>
+    $for(include-before)$
+    $include-before$
+    $endfor$
+    $if(title)$
+    <header>
+      <h1 class="title">$title$</h1>
+    </header>
+    $else$
+      <h1 class="title">Title</h1>
+    $endif$
+
+    <div class="authors">
+      $for(author)$
+      <div class="author">
+        <div>$author.name$</div>
+        <div>$author.affiliation$</div>
+        $if(author.address)$
+        <div>$author.address$</div>
+        $endif$
+        <div>$author.email$</div>
+      </div>
+      $endfor$
+    </div>
+
+    <div class="copyright">
+      <div>
+        <div>Paste the appropriate copyright/license statement here. ACM now supports three different publication options:</div>
+        <ul>
+          <li>ACM copyright: ACM holds the copyright on the work. This is the historical approach.</li>
+          <li>License: The author(s) retain copyright, but ACM receives an exclusive publication license.</li>
+          <li>Open Access: The author(s) wish to pay for the work to be open access. The additional fee must be paid to ACM.</li>
+        </ul>
+        <div>This text field is large enough to hold the appropriate release statement assuming it is single-spaced in Verdana 7 point font. Please do not change the size of this text box.</div>
+        <div style="color: red;">Every submission will be assigned their own unique DOI string to be included here.</div>
+      </div>
+    </div>
+
+    <div class="abstract">
+      $if(abstract)$
+      <h1>Abstract</h1>
+      <p>$abstract$</p>
+      $endif$
+
+      <h1>Author Keywords</h1>
+      <p>
+        $if(keywords)$
+        $keywords$
+        $else$
+        Authors’ choice; of terms; separated; by semi-colons
+        $endif$
+      </p>
+
+      <h1>ACM Classification Keywords</h1>
+      <p>H.5.m. Information interfaces and presentation (e.g., HCI): Miscellaneous. See:<br/><a href="http://www.acm.org/about/class/1998/">http://www.acm.org/about/class/1998/</a></p>
+    </div>
+
+
+    $body$
+
+
+    $if(footer)$
+    <footer>
+      $footer$
+      This article is written for students in EECS 111 and 214 at Northwestern University. Please email slim at u dot northwestern dot edu with questions or corrections.
+    </footer>
+    $endif$
+
+  </body>
+  </html>

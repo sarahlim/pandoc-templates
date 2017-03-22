@@ -66,14 +66,5 @@ $endif$
 
 
 $body$
-
-
-$if(footer)$
-<footer>
-  $footer$
-  This article is written for students in EECS 111 and 214 at Northwestern University. Please email slim at u dot northwestern dot edu with questions or corrections.
-</footer>
-$endif$
-
 </body>
 </html>
