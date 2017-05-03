@@ -82,9 +82,8 @@ $if(abstract)$
 \end{abstract}
 
 $endif$
-
+Hello this is me
 $body$
-
 $if(natbib)$
 $if(biblio-files)$
 $if(biblio-title)$

@@ -8,6 +8,7 @@
 
 % Additions
 \usepackage{forest-qtree}
+\usepackage{forest}
 \usepackage{tikz}
 
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -163,6 +164,7 @@ $if(toc)$
 \tableofcontents
 }
 $endif$
+BACON PANCAKEs
 $body$
 
 $if(natbib)$
